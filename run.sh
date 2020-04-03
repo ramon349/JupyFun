@@ -1,2 +1,1 @@
-
-jupyter notebook --port=8888 --no-browser
+while true; do sleep 1000; done

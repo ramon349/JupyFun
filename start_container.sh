@@ -13,12 +13,10 @@ cleanup
 echo "Going to start container"
 data_path="/Users/ramoncorrea/Desktop/mydata/"
 container_path="/root/data/"
-docker run -d --name ${container_name} \
+docker run --rm -d --name ${container_name} \
 --publish 8888:8888 \
 -v ${data_path}:${container_path}\
 -t ${image_name}:${image_tag} \
-sleep 2
-docker ps
 
 echo "enter container"
 docker exec -it $container_name /bin/bash
